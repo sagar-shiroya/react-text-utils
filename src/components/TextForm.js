@@ -17,6 +17,12 @@ export default function TextForm(props) {
         setText(newText);
     }
 
+    const handleCopyClick = ()=>{
+        navigator.clipboard.writeText(text).then(function(){
+            alert('Copied to clipboard!');
+        });
+    }
+
     const handleChange = (event)=>{
         setText(event.target.value)
     }
@@ -30,6 +36,7 @@ export default function TextForm(props) {
                 </div>
                 <button className="btn btn-primary mx-3" onClick={handleUpClick} >Convert to Uppercase</button>
                 <button className="btn btn-primary mx-3 my-3" onClick={handleLoClick} >Convert to Lowercase</button>
+                <button className="btn btn-primary mx-3 my-3" onClick={handleCopyClick} >Copy to Clipboard</button>
                 <button className="btn btn-danger mx-3 my-3" onClick={handleClearClick} >Clear Text</button>
             </div>
 
