@@ -3,18 +3,14 @@ import { useState } from 'react/cjs/react.development'
 
 export default function About() {
 
-    // let myStyle = {
-    //     color: 'white',
-    //     backgroundColor: 'black'
-    // }
-
+    // Set light mode by default
     const [myStyle, setMyStyle] = useState({
         color: 'black',
         backgroundColor: 'white'
     });
-    
+    // Set "Enable Dark Mode" to button text
     const [btnText, setBtnText] = useState("Enable Dark Mode");
-
+    // Toggling between Dark and Light Mode
     const toggleStyle = ()=>{
         if(myStyle.color === 'white') {
             setMyStyle({

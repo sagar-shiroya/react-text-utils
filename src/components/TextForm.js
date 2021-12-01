@@ -2,27 +2,33 @@ import React, {useState} from 'react'
 
 export default function TextForm(props) {
     
+    // Convert to Uppercase
     const handleUpClick = ()=>{
         let newText = text.toUpperCase();
         setText(newText);
     }
-
+    // Convert to Lowercase
     const handleLoClick = ()=>{
         let newText = text.toLowerCase();
         setText(newText);
     }
-
+    // Remove Extra Spaces
+    const handleExtraSpaces = ()=>{
+        let newText = text.split(/[ ]+/);
+        setText(newText.join(" "));
+    }
+    //Clear Text
     const handleClearClick = ()=>{
         let newText = '';
         setText(newText);
     }
-
+    // Copy to clipboard
     const handleCopyClick = ()=>{
         navigator.clipboard.writeText(text).then(function(){
             alert('Copied to clipboard!');
         });
     }
-
+    // OnChange in TextArea
     const handleChange = (event)=>{
         setText(event.target.value)
     }
@@ -37,6 +43,7 @@ export default function TextForm(props) {
                 <button className="btn btn-primary mx-3" onClick={handleUpClick} >Convert to Uppercase</button>
                 <button className="btn btn-primary mx-3 my-3" onClick={handleLoClick} >Convert to Lowercase</button>
                 <button className="btn btn-primary mx-3 my-3" onClick={handleCopyClick} >Copy to Clipboard</button>
+                <button className="btn btn-primary mx-3 my-3" onClick={handleExtraSpaces} >Remove Extra Spaces</button>
                 <button className="btn btn-danger mx-3 my-3" onClick={handleClearClick} >Clear Text</button>
             </div>
 

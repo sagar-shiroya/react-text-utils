@@ -27,12 +27,12 @@ export default function Navbar(props) {
         </nav>
     )
 }
-
+// Prop Type Checking
 Navbar.propTypes = {
     title: PropTypes.string.isRequired,
     aboutText: PropTypes.string
 }
-
+// Setting Default Props if not passed
 Navbar.defaultProps = {
     title: "Title Here...",
     aboutText: "About"
