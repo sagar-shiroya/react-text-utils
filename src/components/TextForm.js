@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 export default function TextForm(props) {
-    
+
     // Convert to Uppercase
     const handleUpClick = ()=>{
         let newText = text.toUpperCase();
@@ -47,6 +47,7 @@ export default function TextForm(props) {
     const handleChange = (event)=>{
         setText(event.target.value)
     }
+
     const [text,setText] = useState('');
     return (
         <>
@@ -64,9 +65,9 @@ export default function TextForm(props) {
 
             <div className="container my-4 mx-1" style={{color: props.mode==='dark'? 'white' : 'black'}}>
                 <h1>Text Summary</h1>
-                <p>Number of words: {(text !== '') ? text.split(" ").length : 0} </p>
+                <p>Number of words: {text.split(" ").filter(item => item!=='').length} </p>
                 <p>Number of characters: {text.length}</p>
-                <p>{0.08 * text.split(" ").length} minutes read </p>
+                <p>{0.08 * text.split(" ").filter(item => item!=='').length} minutes read </p>
                 <h2>Preview</h2>
                 <p>{text}</p>
             </div>
