@@ -31,7 +31,7 @@ function App() {
   const toggleMode = ()=>{
     if(mode === 'light') {
       setMode('dark');
-      document.body.style.backgroundColor = 'black';
+      document.body.style.backgroundColor = '#042743';
       showAlert('Dark Mode Enabled', 'success');
     } else {
       setMode('light');
@@ -51,12 +51,12 @@ function App() {
           {/* <Navbar /> */}
           <Router>
             <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} changeBgColor={changeBgColor}/>
-            <div className="container my-3">
+            <div className="container">
             <Alert alert={alert}/>
             <Switch>
               {/* Always use exact path, otherwise react router try to match partially.  */}
               <Route exact path="/about">
-                <About />
+                <About mode={mode} />
               </Route>
               <Route exact path="/">
                 <TextForm heading="Enter the text to analyze below" showAlert={showAlert} mode={mode} />
