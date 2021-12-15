@@ -11,6 +11,7 @@ import {
   Route,
   // Link
 } from "react-router-dom";
+import Footer from './components/Footer';
 
 function App() {
 
@@ -63,6 +64,7 @@ function App() {
               </Route>
             </Switch>
             </div>
+            <Footer mode={mode}/>
           </Router>
         </>
         
