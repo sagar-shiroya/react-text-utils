@@ -15,6 +15,37 @@ Below concepts has been used while building this app:
 - useState hook
 - Bootstrap(UI)
 
+## Folder Structure
+
+```
+|-- README.md
+|-- package-lock.json
+|-- package.json
+|-- public
+|   |-- favicon-16x16.png
+|   |-- favicon-32x32.png
+|   |-- favicon-96x96.png
+|   |-- favicon.ico
+|   |-- index.html
+|   |-- manifest.json
+|   `-- robots.txt
+`-- src
+    |-- App.css
+    |-- App.js
+    |-- App.test.js
+    |-- components
+    |   |-- About.js
+    |   |-- Alert.js
+    |   |-- Footer.js
+    |   |-- Navbar.js
+    |   `-- TextForm.js
+    |-- index.css
+    |-- index.js
+    |-- logo.svg
+    |-- reportWebVitals.js
+    `-- setupTests.js
+```
+
 ## About an app
 
 Textutils gives you a way to 
