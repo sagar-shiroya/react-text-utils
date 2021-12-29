@@ -1,5 +1,7 @@
 
 # React Text Utils App
+[![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)](https://text-utils-tool.netlify.app/)
+[![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)](https://react-text-utils.web.app/)
 
 Browse app here: **[react-text-utils](https://react-text-utils.web.app/)**
 
