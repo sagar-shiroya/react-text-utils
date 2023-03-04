@@ -70,3 +70,8 @@ It suits to count characters in Facebook, Blog, Books, Excel Document, PDF Docum
 1. `git clone https://github.com/sagar-shiroya/react-text-utils.git` (Clone it in your local)
 2. `npm install` (Installing dependencies)
 3. `npm run start` (Run an application)
+
+## Demo
+![image](https://user-images.githubusercontent.com/14357087/222885662-e7a41def-fba7-4cf9-8ba4-3dd1a8f1f5ff.png)
+![image](https://user-images.githubusercontent.com/14357087/222885677-159a6bff-997d-4041-ae1d-4f27b94d5f56.png)
+
